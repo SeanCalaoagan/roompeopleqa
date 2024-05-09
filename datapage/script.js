@@ -33,7 +33,8 @@ function timeRange(){
     varianceCalculator(valueRange);
     meanDevCalculator(valueRange);
     stanDevCalculator(valueRange);
-    zscoreCalculator(valueRange, time1);
+    zscoreCalculator(valueRange, samples[time1]);
+    
 }
 
 function meanCalculator(valueRange){
@@ -130,6 +131,7 @@ function stanDevCalculator(valueRange){
 
 function zscoreCalculator(valueRange, sampleData){
     let zscoreValue = 0;
+    let zscoreSample = sampleData;
     
     // Calculate the mean (average) of the values in the array
     const mean = valueRange.reduce((acc, val) => acc + val, 0) / valueRange.length;
@@ -142,5 +144,5 @@ function zscoreCalculator(valueRange, sampleData){
     zscoreValue = (sampleData - mean) / stdDeviation;
 
     document.getElementById("zscoreValue").innerHTML = zscoreValue;
-
+    document.getElementById("zscoreSample").innerHTML = zscoreSample;
 }
