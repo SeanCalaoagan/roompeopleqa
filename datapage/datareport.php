@@ -121,6 +121,8 @@
         <p id="standevValue" class="blacktext">###</p>
         <p>Z Score:</p>
         <p id="zscoreValue" class="blacktext">###</p>
+        <p>Value of the Z-Score Sample:</p>
+        <p id="zscoreSample" class="blacktext">###</p>
     </div>
 
     <br>
